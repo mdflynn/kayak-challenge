@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { fetchAirlineData } from "../../apiCalls";
 
 const HomePage = () => {
-  return <h1>Home Page</h1>;
+  const [airlineData, setAirlineData] = useState([]);
+
+  useEffect(() => {
+    fetchAirlineData(setAirlineData);
+  }, []);
+  return <h1>Home Page{airlineData.length > 0 && console.log(airlineData)}</h1>;
 };
 
 export default HomePage;
