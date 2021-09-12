@@ -1,4 +1,5 @@
 import React from "react";
+import "./Filter.scss";
 
 const Filter = ({ filter }) => {
   const handleFilterChange = (e) => {
