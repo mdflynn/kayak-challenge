@@ -1,0 +1,17 @@
+.filter-form {
+    display: flex;
+
+    input {
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+
+    label {
+        margin-right: 24px;
+        font-family: HelveticaNeue;
+        font-size: 14px;
+        font-weight: normal;
+        color: #192024;
+    }
+}
