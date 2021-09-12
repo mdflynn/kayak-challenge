@@ -2,11 +2,12 @@ import React from "react";
 
 const AirlineCard = ({ airlineDetails }) => {
   const { alliance, logoURL, name, phone, site } = airlineDetails;
+  const imgSrc = "https://kayak.com" + logoURL;
 
   return (
     <article className="card-container">
       <div className="card-title-container">
-        <img className="card-img" src={logoURL} alt={`${name} logo`} />
+        <img className="card-img" src={imgSrc} alt={`${name} logo`} />
         <p className="card-title">{name}</p>
       </div>
       <div className="airline-details">
