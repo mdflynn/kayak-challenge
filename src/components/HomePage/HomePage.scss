@@ -1,17 +1,27 @@
 .main {
-    background-color: #f9fafb;
+  background-color: #f9fafb;
+  padding-left: 94px;
 
-    .main-title {
-        padding: 67px 0 73px 94px;
-        font-family: HelveticaNeue;
-        font-size: 44px;
-        font-weight: 900;
-        color: #000000;
-    }
+  .main-title {
+    padding: 67px 0 73px 0;
+    font-family: HelveticaNeue;
+    font-size: 44px;
+    font-weight: 900;
+    color: #000000;
+  }
+
+  .main-filter {
+    padding-bottom: 23px;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    color: #192024;
+  }
 }
 
 .card-display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  padding-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
