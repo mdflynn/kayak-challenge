@@ -1,8 +1,15 @@
+import React from 'react';
 import './App.scss';
 
-function App() {
+import HomePage from '../HomePage/HomePage';
+import Nav from '../Nav/Nav';
+
+const App = () => {
   return (
-   <h1>Kayak Challenge</h1>
+   <>
+   <Nav />
+   <HomePage />
+   </>
   );
 }
 
