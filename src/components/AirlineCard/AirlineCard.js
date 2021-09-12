@@ -9,6 +9,26 @@ const AirlineCard = ({ airlineDetails }) => {
 
   const imgSrc = "https://kayak.com" + logoURL;
 
+  const displayAlliance = (allianceDetails) => {
+    let airlineAlliance;
+
+    switch (allianceDetails) {
+      case "OW":
+        airlineAlliance = "OneWorld";
+        break;
+      case "ST":
+        airlineAlliance = "Sky Team";
+        break;
+      case "SA":
+        airlineAlliance = "Star Alliance";
+        break;
+      default:
+        airlineAlliance = "No Alliance";
+    }
+
+    return airlineAlliance;
+  };
+
   return (
     <article
       className={`card-container ${displayDetails ? "hover-border" : ""}`}
@@ -17,9 +37,11 @@ const AirlineCard = ({ airlineDetails }) => {
     >
       <img className="card-img" src={imgSrc} alt={`${name} logo`} />
       <div className="airline-details">
-        <p className="airline-name">{name}</p>
+        <p className={`airline-name ${displayDetails ? "hover-title" : ""}`}>
+          {name}
+        </p>
         <div className={isHovered}>
-          <p className="airline-alliance">{alliance}</p>
+          <p className="airline-alliance">{displayAlliance(alliance)}</p>
           <p className="airline-phone">{phone}</p>
           <p className="airline-url">{site}</p>
         </div>
