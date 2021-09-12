@@ -1,11 +1,22 @@
 import React from "react";
 
 const Filter = ({ filter }) => {
+  const handleFilterChange = (e) => {
+    const filterOption = e.target.value;
 
-    const handleFilterChange = (e) => {
-        console.log(e.target);
+    filter((prevState) => {
+      if (!prevState.includes(filterOption)) {
+        return [...prevState, filterOption];
+      } else {
+        const removeFilterOption = prevState.filter(
+          (option) => option !== filterOption
+        );
 
-    }
+        return removeFilterOption;
+      }
+    });
+  };
+
   return (
     <form className="filter-form" onChange={handleFilterChange}>
       <input type="checkbox" name="oneworld" value="OW" />
