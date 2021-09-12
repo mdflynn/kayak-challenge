@@ -1,4 +1,5 @@
 import React from "react";
+import "./Filter.scss";
 
 const Filter = ({ filter }) => {
   const handleFilterChange = (e) => {
@@ -22,7 +23,7 @@ const Filter = ({ filter }) => {
       <input type="checkbox" name="oneworld" value="OW" />
       <label htmlFor="oneworld">OneWorld</label>
       <input type="checkbox" name="skyteam" value="ST" />
-      <label htmlFor="skyteam">Sky team</label>
+      <label htmlFor="skyteam">Sky Team</label>
       <input type="checkbox" name="staralliance" value="SA" />
       <label htmlFor="staralliance">Star Alliance</label>
     </form>

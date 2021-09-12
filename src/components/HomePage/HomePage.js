@@ -24,17 +24,19 @@ const HomePage = () => {
   };
 
   const updateFilteredAirlines = () => {
-    return airlineData.filter(airline => filterOptions.includes(airline.alliance))
-  }
+    return airlineData.filter((airline) =>
+      filterOptions.includes(airline.alliance)
+    );
+  };
 
-  const determineDisplay = filterOptions.length > 0 ? updateFilteredAirlines() : airlineData;
+  const determineDisplay =
+    filterOptions.length > 0 ? updateFilteredAirlines() : airlineData;
 
   return (
-    <main>
-      <p>Airlines</p>
-      <p>Filter By Alliances</p>
+    <main className="main">
+      <p className="main-title">Airlines</p>
+      <p className="main-filter">Filter By Alliances</p>
       <Filter filter={setFilterOptions} />
-      {filterOptions.length > 0 && console.log(filterOptions)}
       <section className="card-display">
         {airlineData.length > 0 && generateAirlineCards(determineDisplay)}
       </section>
