@@ -41,9 +41,7 @@ const AirlineCard = ({ airlineDetails }) => {
     >
       <img className="card-img" src={imgSrc} alt={`${name} logo`} />
       <div className="airline-details">
-        <p className={`airline-name ${addHoverTitleStyle}`}>
-          {name}
-        </p>
+        <p className={`airline-name ${addHoverTitleStyle}`}>{name}</p>
         <div className={isHovered}>
           <p className="airline-alliance">{displayAlliance(alliance)}</p>
           <p className="airline-phone">{phone}</p>
