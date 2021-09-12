@@ -33,7 +33,7 @@ const HomePage = () => {
     filterOptions.length > 0 ? updateFilteredAirlines() : airlineData;
 
   return (
-    <main>
+    <main className="main">
       <p className="main-title">Airlines</p>
       <p className="main-filter">Filter By Alliances</p>
       <Filter filter={setFilterOptions} />
