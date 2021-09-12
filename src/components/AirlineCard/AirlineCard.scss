@@ -1,45 +1,49 @@
 .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 16px 16px 0;
-    height: 240px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04), 0 3px 6px 0 rgba(25, 32, 36, 0.16);
-    // border: solid 1px #363f45;
-    .card-img {
-        height: 32px;
-        width: 32px;
-        margin-right: 18px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px 16px 0;
+  height: 240px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04),
+    0 3px 6px 0 rgba(25, 32, 36, 0.16);
+
+  .card-img {
+    height: 32px;
+    width: 32px;
+    margin-right: 18px;
+  }
 }
 
-
 .airline-name {
-    font-family: HelveticaNeue;
-    font-size: 16px;
-    font-weight: bold;
-    color: #192024;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  color: #192024;
 }
 
 .hover-details {
+  .airline-alliance,
+  .airline-phone {
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    color: #192024;
+  }
 
-    .airline-alliance, .airline-phone {
-        font-family: HelveticaNeue;
-        font-size: 14px;
-        font-weight: normal;
-        color: #192024;
-    }
-    
-    .airline-url {
-        font-family: HelveticaNeue;
-        font-size: 14px;
-        font-weight: normal;
-        color: #5a6872;
-    }
+  .airline-url {
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a6872;
+  }
 }
 
 .hide-details {
-    display: none;
+  display: none;
+}
+
+.hover-border {
+  border: solid 1px #363f45;
 }
