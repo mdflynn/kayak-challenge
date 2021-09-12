@@ -5,8 +5,6 @@ const AirlineCard = ({ airlineDetails }) => {
   const { alliance, logoURL, name, phone, site } = airlineDetails;
   const [displayDetails, setDisplayDetails] = useState(false);
 
-  const isHovered = displayDetails ? "hover-details" : "hide-details";
-
   const imgSrc = "https://kayak.com" + logoURL;
 
   const displayAlliance = (allianceDetails) => {
@@ -29,17 +27,21 @@ const AirlineCard = ({ airlineDetails }) => {
     return airlineAlliance;
   };
 
+  const isHovered = displayDetails ? "hover-details" : "hide-details";
+
+  const addHoverBorderStyle = displayDetails ? "hover-border" : "";
+
+  const addHoverTitleStyle = displayDetails ? "hover-title" : "";
+
   return (
     <article
-      className={`card-container ${displayDetails ? "hover-border" : ""}`}
+      className={`card-container ${addHoverBorderStyle}`}
       onMouseEnter={() => setDisplayDetails(true)}
       onMouseLeave={() => setDisplayDetails(false)}
     >
       <img className="card-img" src={imgSrc} alt={`${name} logo`} />
       <div className="airline-details">
-        <p className={`airline-name ${displayDetails ? "hover-title" : ""}`}>
-          {name}
-        </p>
+        <p className={`airline-name ${addHoverTitleStyle}`}>{name}</p>
         <div className={isHovered}>
           <p className="airline-alliance">{displayAlliance(alliance)}</p>
           <p className="airline-phone">{phone}</p>

@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .filter-form {
     display: flex;
 
@@ -9,9 +11,6 @@
 
     label {
         margin-right: 24px;
-        font-family: HelveticaNeue;
-        font-size: 14px;
-        font-weight: normal;
-        color: #192024;
+        @include font-styling;
     }
 }

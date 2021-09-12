@@ -1,10 +1,12 @@
+@import "../../variables";
+
 .main {
   background-color: #f9fafb;
   padding-left: 94px;
 
   .main-title {
     padding: 67px 0 73px 0;
-    font-family: HelveticaNeue;
+    font-family: $app-font;
     font-size: 44px;
     font-weight: 900;
     color: #000000;
@@ -12,10 +14,10 @@
 
   .main-filter {
     padding-bottom: 23px;
-    font-family: HelveticaNeue;
+    font-family: $app-font;
     font-size: 16px;
     font-weight: bold;
-    color: #192024;
+    color: $font-main-color;
   }
 }
 
