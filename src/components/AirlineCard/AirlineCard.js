@@ -1,4 +1,5 @@
 import React from "react";
+import "./AirlineCard.scss"
 
 const AirlineCard = ({ airlineDetails }) => {
   const { alliance, logoURL, name, phone, site } = airlineDetails;
