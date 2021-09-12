@@ -23,7 +23,7 @@ const HomePage = () => {
   };
 
   return (
-    <section>
+    <section className="card-display">
       {airlineData.length > 0 && generateAirlineCards()}
     </section>
   );
