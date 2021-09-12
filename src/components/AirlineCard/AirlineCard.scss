@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "../../mixins";
 
 .card-container {
   display: flex;
@@ -22,16 +23,14 @@
   font-family: $app-font;
   font-size: 16px;
   font-weight: bold;
-  color: #192024;
+  color: $font-main-color;
 }
 
 .hover-details {
+  
   .airline-alliance,
   .airline-phone {
-    font-family: $app-font;
-    font-size: 14px;
-    font-weight: normal;
-    color: #192024;
+    @include font-styling;
   }
 
   .airline-url {
